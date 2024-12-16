@@ -1,0 +1,3 @@
+[submodule "secrets"]
+	path = secrets
+	url = git@github.com:Crystal4B/.dots-secrets.git
