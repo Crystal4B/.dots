@@ -1,0 +1,6 @@
+installs: 
+  - Starship.Starship
+  - Microsoft.Powershell
+  - gerardog.gsudo
+  - wez.wezterm
+
