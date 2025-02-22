@@ -7,9 +7,9 @@
     ./git.nix
     ./todoist.nix
     ./zsh.nix
+    ./nushell.nix
     ./beeper.nix
     ./steam.nix
-    ./firefox.nix
     ./ghostty.nix
     ./hyprland.nix
     ./thunderbird.nix
@@ -17,5 +17,7 @@
     ./mullvad.nix
     ./vpn.nix
     ./tmux.nix
+    ./krita.nix
+    ./obsidian.nix
   ];
 }

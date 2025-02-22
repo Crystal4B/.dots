@@ -25,8 +25,6 @@
           shuffle
           adblock
         ];
-        theme = spicePkgs.themes.text;
-        colorScheme = "kanagawa";
       };
   };
 }

@@ -1,8 +1,11 @@
 {
   imports = [
+    ./asus.nix
     ./nvidia.nix
     ./pipewire.nix
     ./bluetooth.nix
+
+    ./drawing.nix
 
     ./fonts.nix
 

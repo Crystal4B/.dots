@@ -28,5 +28,8 @@
     home.file.".config/waybar" = {
       source = ../../dotfiles/linux/.config/waybar;
     };
+    home.file."wallpapers" = {
+      source = ../../walls;
+    };
   };
 }

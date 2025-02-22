@@ -10,7 +10,7 @@
       "wheel"
       "bluetooth"
     ];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
   };
 
   home-manager.useGlobalPkgs = true;

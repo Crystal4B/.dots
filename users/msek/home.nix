@@ -12,10 +12,9 @@
     vesktop.enable = true;
     git.enable = true;
     todoist.enable = true;
-    zsh.enable = true;
+    nushell.enable = true;
     beeper.enable = true;
     steam.enable = true;
-    firefox.enable = true;
     ghostty.enable = true;
     hyprland.enable = true;
     thunderbird.enable = true;
@@ -23,6 +22,8 @@
     mullvad-vpn.enable = true;
     work-vpn.enable = true;
     tmux.enable = true;
+    krita.enable = true;
+    obsidian.enable = true;
   };
 
   home.username = "msek";
