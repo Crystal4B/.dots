@@ -28,3 +28,5 @@ vim.diagnostic.config({ update_in_insert = true })
 
 vim.opt.updatetime = 50
 vim.opt.listchars = { eol = "↲", tab = "▸ ", trail = "·" }
+
+vim.opt.clipboard = "unnamedplus"
