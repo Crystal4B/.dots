@@ -19,5 +19,6 @@
     ./tmux.nix
     ./krita.nix
     ./obsidian.nix
+    ./theme.nix
   ];
 }

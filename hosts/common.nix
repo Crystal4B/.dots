@@ -4,7 +4,7 @@
     ../modules/nixos
 
     ../users/msek/msek.nix
-    ../users/guest.nix
+    ../users/guest/guest.nix
   ];
 
   modules = {
@@ -30,6 +30,15 @@
     greetd.enable = true;
     gimp.enable = true;
     feh.enable = true;
+  };
+
+  # needed for themeing
+  programs.dconf.enable = true;
+
+  # fix documentation
+  documentation.man = {
+    enable = true;
+    generateCaches = true;
   };
 
   users.defaultUserShell = pkgs.zsh;

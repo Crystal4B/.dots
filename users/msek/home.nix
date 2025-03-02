@@ -1,5 +1,7 @@
 {
   imports = [
+    ../common.nix
+
     ../../modules/home
   ];
 
@@ -13,7 +15,7 @@
     git.enable = true;
     todoist.enable = true;
     nushell.enable = true;
-    beeper.enable = true;
+    matrix-client.enable = true;
     steam.enable = true;
     ghostty.enable = true;
     hyprland.enable = true;
