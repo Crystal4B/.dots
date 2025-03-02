@@ -15,7 +15,7 @@
     ];
 
     home.file.".config/ghostty" = {
-      source = ../../dotfiles/linux/.config/ghostty;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dots/dotfiles/linux/.config/ghostty";
     };
   };
 }

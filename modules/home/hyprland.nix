@@ -23,13 +23,13 @@
     ];
 
     home.file.".config/hypr" = {
-      source = ../../dotfiles/linux/.config/hypr;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dots/dotfiles/linux/.config/hypr";
     };
     home.file.".config/waybar" = {
-      source = ../../dotfiles/linux/.config/waybar;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dots/dotfiles/linux/.config/waybar";
     };
     home.file."wallpapers" = {
-      source = ../../walls;
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dots/walls";
     };
   };
 }

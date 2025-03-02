@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   imports = [
     ../common.nix
@@ -42,7 +43,8 @@
     variant = "programmers";
   };
 
-  home.file.".config/nix".source = ../../dotfiles/linux/.config/nix;
+  home.file.".config/nix".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dots/dotfiles/linux/.config/nix";
 
   programs.home-manager.enable = true;
 
