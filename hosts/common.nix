@@ -32,7 +32,7 @@
     feh.enable = true;
   };
 
-  # needed for themeing
+  # needed for theming
   programs.dconf.enable = true;
 
   # fix documentation
