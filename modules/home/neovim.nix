@@ -38,7 +38,7 @@
     ];
 
     home.file.".config/nvim" = {
-      source = ../../dotfiles/linux/.config/nvim;
+      source = ../../dotfiles/common/nvim;
       recursive = true;
     };
   };
