@@ -5,6 +5,7 @@
     ./spotify.nix
     ./vesktop.nix
     ./git.nix
+    ./lazygit.nix
     ./todoist.nix
     ./zsh.nix
     ./nushell.nix

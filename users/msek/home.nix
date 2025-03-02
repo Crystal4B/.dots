@@ -13,6 +13,7 @@
     yazi.enable = true;
     spotify.enable = true;
     vesktop.enable = true;
+    lazygit.enable = true;
     git.enable = true;
     todoist.enable = true;
     nushell.enable = true;
