@@ -9,15 +9,19 @@
   nixpkgs.config.allowUnfree = true;
 
   modules = {
+    # TUI
+    tmux.enable = true;
     neovim.enable = true;
     yazi.enable = true;
-    spotify.enable = true;
-    vesktop.enable = true;
     lazygit.enable = true;
     git.enable = true;
-    todoist.enable = true;
     nushell.enable = true;
-    matrix-client.enable = true;
+
+    # GUI
+    spotify.enable = true;
+    vesktop.enable = true;
+    todoist.enable = true;
+    beeper.enable = true;
     steam.enable = true;
     ghostty.enable = true;
     hyprland.enable = true;
@@ -25,7 +29,6 @@
     bitwarden.enable = true;
     mullvad-vpn.enable = true;
     work-vpn.enable = true;
-    tmux.enable = true;
     krita.enable = true;
     obsidian.enable = true;
   };
