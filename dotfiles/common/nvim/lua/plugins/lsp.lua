@@ -1,5 +1,5 @@
 local function is_nixos()
-	return true
+	return os.getenv("NIXOS_SYSTEM") ~= nil
 end
 
 return {

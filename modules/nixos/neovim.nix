@@ -9,6 +9,10 @@
   };
 
   config = lib.mkIf config.modules.neovim.enable {
+    environment.sessionVariables = {
+      NIXOS_SYSTEM = "true";
+    };
+
     programs.neovim = {
       enable = true;
       defaultEditor = true;
