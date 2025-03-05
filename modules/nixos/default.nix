@@ -1,6 +1,7 @@
 {
   imports = [
     ./asus.nix
+    ./touchpad.nix
     ./nvidia.nix
     ./pipewire.nix
     ./bluetooth.nix

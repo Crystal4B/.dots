@@ -9,6 +9,7 @@
 
   modules = {
     asus.enable = true;
+    touchpad.enable = true;
   };
 
   # Bootloader
