@@ -9,7 +9,6 @@
     ./todoist.nix
     ./zsh.nix
     ./nushell.nix
-    ./beeper.nix
     ./steam.nix
     ./ghostty.nix
     ./hyprland.nix

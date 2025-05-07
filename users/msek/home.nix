@@ -21,7 +21,6 @@
     spotify.enable = true;
     vesktop.enable = true;
     todoist.enable = true;
-    beeper.enable = true;
     steam.enable = true;
     ghostty.enable = true;
     hyprland.enable = true;
