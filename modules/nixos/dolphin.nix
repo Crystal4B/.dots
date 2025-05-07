@@ -11,7 +11,7 @@
 
   config = lib.mkIf config.modules.dolphin.enable {
     environment.systemPackages = with pkgs; [
-      dolphin
+      kdePackages.dolphin
     ];
   };
 }
