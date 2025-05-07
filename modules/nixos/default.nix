@@ -21,6 +21,8 @@
 
     ./yubikey.nix
 
+    ./openconnect-sso.nix
+
     ./terminals/ghostty.nix
     ./terminals/kitty.nix
 

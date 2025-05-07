@@ -23,6 +23,8 @@
     pavu.enable = true;
     neovim.enable = true;
 
+    opensso.enable = true;
+
     yubikey.enable = true;
 
     ghostty.enable = true;
