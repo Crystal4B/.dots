@@ -23,8 +23,6 @@
     pavu.enable = true;
     neovim.enable = true;
 
-    opensso.enable = true;
-
     yubikey.enable = true;
 
     ghostty.enable = true;
@@ -32,6 +30,7 @@
     greetd.enable = true;
     gimp.enable = true;
     feh.enable = true;
+    tldr.enable = true;
   };
 
   # needed for theming

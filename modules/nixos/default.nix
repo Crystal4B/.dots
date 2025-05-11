@@ -21,8 +21,6 @@
 
     ./yubikey.nix
 
-    ./openconnect-sso.nix
-
     ./terminals/ghostty.nix
     ./terminals/kitty.nix
 
@@ -30,5 +28,6 @@
     ./greetd.nix
     ./gimp.nix
     ./feh.nix
+    ./tldr.nix
   ];
 }

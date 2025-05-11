@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   config,
   lib,
   ...
@@ -12,9 +13,8 @@
   config = lib.mkIf config.modules.work-vpn.enable {
     home.packages = with pkgs; [
       remmina
-      networkmanager-openconnect
       networkmanagerapplet
-      openconnect
+      inputs.openconnect-sso.packages."${system}".openconnect-sso
     ];
   };
 }
