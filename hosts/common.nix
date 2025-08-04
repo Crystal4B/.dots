@@ -33,6 +33,8 @@
     tldr.enable = true;
   };
 
+  services.udisks2.enable = true;
+
   # needed for theming
   programs.dconf.enable = true;
 
