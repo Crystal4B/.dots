@@ -8,6 +8,7 @@
   imports = [
     ../modules/nixos
 
+    ../users/root/root.nix
     ../users/msek/msek.nix
     ../users/guest/guest.nix
 
@@ -19,7 +20,7 @@
     defaultSopsFormat = "yaml";
 
     age = {
-      keyFile = "/home/msek/.config/sops/age/keys.txt";
+      keyFile = "/etc/nixos/sops/age/keys.txt";
       generateKey = false;
     };
 
@@ -30,9 +31,7 @@
       "msek/username" = {
         owner = "msek";
       };
-      "msek/password" = {
-        owner = "msek";
-      };
+      "msek/password" = { };
       "wireguard/public_key" = { };
       "wireguard/preshared_key" = { };
       "wireguard/private_key" = { };
@@ -41,6 +40,7 @@
       "wireguard/allowed_ips" = { };
     };
 
+    # TODO: Find better homes for these
     templates = {
       "wg0.conf" = {
         content = ''

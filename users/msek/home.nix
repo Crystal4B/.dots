@@ -30,6 +30,9 @@
     work-vpn.enable = true;
     krita.enable = true;
     obsidian.enable = true;
+
+    # SECURITY
+    sops.enable = true;
   };
 
   home.username = "msek";

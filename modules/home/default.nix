@@ -20,5 +20,6 @@
     ./krita.nix
     ./obsidian.nix
     ./theme.nix
+    ./sops.nix
   ];
 }

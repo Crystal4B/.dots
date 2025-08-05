@@ -14,7 +14,6 @@
       bluez
       bluez-tools
       blueman
-      sops
     ];
 
     services.blueman.enable = true;
