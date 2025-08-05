@@ -41,22 +41,33 @@
       "wireguard/allowed_ips" = { };
     };
 
-    templates."wg0.conf" = {
-      content = ''
-        [Interface]
-        Address = ${config.sops.placeholder."wireguard/address"}
-        PrivateKey = ${config.sops.placeholder."wireguard/private_key"}
-        DNS = 1.1.1.1
-        MTU = 1420
+    templates = {
+      "wg0.conf" = {
+        content = ''
+          [Interface]
+          Address = ${config.sops.placeholder."wireguard/address"}
+          PrivateKey = ${config.sops.placeholder."wireguard/private_key"}
+          DNS = 1.1.1.1
+          MTU = 1420
 
-        [Peer]
-        PublicKey = ${config.sops.placeholder."wireguard/public_key"}
-        PresharedKey = ${config.sops.placeholder."wireguard/preshared_key"}
-        AllowedIPs = ${config.sops.placeholder."wireguard/allowed_ips"}
-        Endpoint = ${config.sops.placeholder."wireguard/endpoint"}
-        PersistentKeepalive = 0
-      '';
-      path = "/etc/wireguard/wg0.conf";
+          [Peer]
+          PublicKey = ${config.sops.placeholder."wireguard/public_key"}
+          PresharedKey = ${config.sops.placeholder."wireguard/preshared_key"}
+          AllowedIPs = ${config.sops.placeholder."wireguard/allowed_ips"}
+          Endpoint = ${config.sops.placeholder."wireguard/endpoint"}
+          PersistentKeepalive = 0
+        '';
+        path = "/etc/wireguard/wg0.conf";
+      };
+      "user.gitconfig" = {
+        content = ''
+          [user]
+            name = ${config.sops.placeholder."msek/username"}
+            email = ${config.sops.placeholder."msek/email"}
+        '';
+        path = "/home/msek/.config/git/user.gitconfig";
+        owner = "msek";
+      };
     };
   };
 
