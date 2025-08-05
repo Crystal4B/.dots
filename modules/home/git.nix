@@ -12,6 +12,8 @@
   config = lib.mkIf config.modules.git.enable {
     programs.git = {
       enable = true;
+      userName = "Marcin Sęk";
+      userEmail = "marcin.j.sek@gmail.com";
       extraConfig = {
         pull.rebase = true;
       };

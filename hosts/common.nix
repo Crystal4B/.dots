@@ -1,11 +1,64 @@
-{ pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  config,
+  ...
+}:
 {
   imports = [
     ../modules/nixos
 
     ../users/msek/msek.nix
     ../users/guest/guest.nix
+
+    inputs.sops-nix.nixosModules.sops
   ];
+
+  sops = {
+    defaultSopsFile = ../secrets.yaml;
+    defaultSopsFormat = "yaml";
+
+    age = {
+      keyFile = "/home/msek/.config/sops/age/keys.txt";
+      generateKey = false;
+    };
+
+    secrets = {
+      "msek/email" = {
+        owner = "msek";
+      };
+      "msek/username" = {
+        owner = "msek";
+      };
+      "msek/password" = {
+        owner = "msek";
+      };
+      "wireguard/public_key" = { };
+      "wireguard/preshared_key" = { };
+      "wireguard/private_key" = { };
+      "wireguard/endpoint" = { };
+      "wireguard/address" = { };
+      "wireguard/allowed_ips" = { };
+    };
+
+    templates."wg0.conf" = {
+      content = ''
+        [Interface]
+        Address = ${config.sops.placeholder."wireguard/address"}
+        PrivateKey = ${config.sops.placeholder."wireguard/private_key"}
+        DNS = 1.1.1.1
+        MTU = 1420
+
+        [Peer]
+        PublicKey = ${config.sops.placeholder."wireguard/public_key"}
+        PresharedKey = ${config.sops.placeholder."wireguard/preshared_key"}
+        AllowedIPs = ${config.sops.placeholder."wireguard/allowed_ips"}
+        Endpoint = ${config.sops.placeholder."wireguard/endpoint"}
+        PersistentKeepalive = 0
+      '';
+      path = "/etc/wireguard/wg0.conf";
+    };
+  };
 
   modules = {
     nvidia.enable = true;
@@ -32,6 +85,8 @@
     feh.enable = true;
     tldr.enable = true;
   };
+
+  networking.wg-quick.interfaces.wg0.configFile = "/etc/wireguard/wg0.conf";
 
   services.udisks2.enable = true;
 
